@@ -1,0 +1,7 @@
+<div class="filter_options_container">  
+  <%= form_tag(filter_status_workorders_path ,:method => "get", :remote => true) do %>
+  Filter By Status 
+    <%= select_tag 'status_id', options_for_select(Status.all.map { |status| [status.status_description , status.id] },:selected=> @selected_status)  %>
+     <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>

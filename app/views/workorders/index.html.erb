@@ -1,0 +1,36 @@
+<h3>Workorder Details</h3>
+</h4><div id="workorder_notice" ></div> </h4>
+<div id ="ExpandAddWorkorder" >
+<%= link_to 'Expand Add Workorder', new_workorder_path, :remote => true %>
+</div>
+<div id ="CollapseAddWorkorder" style ="Display:none">
+<%= link_to 'Hide Add Workorder', hide_workorders_path , :remote => true %>
+</div>
+<div id ="add_workorder">
+</div>
+<br/>
+
+	<%= render 'workorders/search'%>
+
+<br/>
+
+<div id="workorderlist">
+	<%= render 'list_of_workorders' %>
+</div>
+
+<div class="modal fade", id="workordermodal">
+<div class="modal-dialog">
+    <div class="modal-content">
+	<div class="modal-header">
+          <a data-dismiss="modal" class="close">×</a>
+          <h4 class="modal-title">Work Order</h4>
+    </div>
+	<div class="modal-body">
+		<div id="workorderdata"></div>
+	</div>   
+	<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+	</div>
+	</div>
+</div>
+</div>	

@@ -1,0 +1,29 @@
+<%= form_for(@workorder , :remote => true) do |f| %>
+  <%= render 'error' %>
+
+  <div class="field">
+    <%= f.label :work_details %>
+    <%= f.text_field :work_details %>
+  </div>
+  <div class="field">
+    <%= f.label :worker %>
+    <%= f.select :worker_id,Worker.all.map { |worker| [worker.first_name + " " + worker.last_name ,worker.id] } %>
+  </div>
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.select :status_id ,Status.all.map { |status| [status.status_description , status.id] } %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_creation %>
+    <%= f.date_select :date_of_creation %>
+  </div>
+  <div class="field" style ="Display:none">
+    <%= f.label :last_updated_at %>
+    <%= f.date_select :last_updated_at %>
+  </div>
+  <div class="actions">
+    <%= button_tag(type: "submit", class: "btn btn btn-primary") do %>
+				Submit 
+			<% end %>
+  </div>
+<% end %>

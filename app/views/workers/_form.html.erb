@@ -1,0 +1,30 @@
+
+<br/>
+<%= form_for(@worker, :remote => true) do |f| %>
+  <% if @worker.errors.any? %>
+    <div id = "error_display">
+      <h2><%= pluralize(@worker.errors.count, "error") %> prohibited this worker from being saved:</h2>
+
+      <ul>
+      <% @worker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table >
+    <tr>
+		<td><%= f.label :first_name%></td>		
+		<td><%= f.text_field :first_name ,:placeholder => "First Name"%></td>
+		<td> </td>
+		<td><%= f.label :last_name%></td>
+		<td><%= f.text_field :last_name , :placeholder => "Last Name"%> </td>
+		<td> </td>
+		<td><%= button_tag(type: "submit", class: "btn btn btn-primary") do %>
+				Submit 
+			<% end %></td>
+	</tr>
+  </table>
+</form>  
+<% end %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+John:  
+  first_name: John
+  last_name: Morgan
+
+David:  
+  first_name: Zach
+  last_name: Morgan

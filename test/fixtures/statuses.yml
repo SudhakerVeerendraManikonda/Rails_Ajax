@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+created:  
+  status_description: created
+
+InProgress:  
+  status_description: InProgress

@@ -1,0 +1,6 @@
+$('#workerlist').html("<%= escape_javascript(render 'list_of_workers') %>");
+$('#workerlist').effect('highlight');
+$('#add_worker').html("<%= escape_javascript(render 'form') %>");
+$("#worker_notice").html("<%= escape_javascript(flash[:worker_notice])%>");
+$('#worker_notice').fadeIn();
+setTimeout(function() { $('#worker_notice').fadeOut(); }, 2000);

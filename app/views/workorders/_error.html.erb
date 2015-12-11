@@ -1,0 +1,12 @@
+
+<% if @workorder.errors.any? %>
+    <div id = "error_display">
+      <h2><%= pluralize(@workorder.errors.count, "error") %> prohibited this workorder from being saved:</h2>
+
+      <ul>
+      <% @workorder.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+ <% end %>

@@ -1,0 +1,32 @@
+<h3>Worker Details</h3>
+</h4><div id="worker_notice" ></div> </h4>
+<div id ="ExpandAddWorker" >
+<%= link_to 'Expand Add Worker', new_worker_path, :remote => true %>
+</div>
+<div id ="CollapseAddWorker" style ="Display:none">
+<%= link_to 'Hide Add Worker', hide_workers_path , :remote => true %>
+</div>
+
+<div id ="add_worker">
+</div>
+
+
+<br/>
+
+<div id="workerlist">
+	<%= render 'list_of_workers' %>
+</div>
+
+<div class="modal fade", id="myModal">
+<div class="modal-dialog">
+    <div class="modal-content">
+	<div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Edit Worker</h4>
+    </div>
+	<div class="modal-body">
+		<div id="dialog-data"></div>
+	</div>   	
+	</div>
+</div>
+</div>	

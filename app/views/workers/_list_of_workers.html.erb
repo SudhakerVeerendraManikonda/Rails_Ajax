@@ -1,0 +1,23 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+	  <th>Employee ID </th>
+      <th>First Name</th>
+      <th>Last Name</th>      
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workers.each do |worker| %>
+      <tr>
+	    <td><%= link_to "#{worker.id}" , worker , :remote => true%></td>
+        <td><%= worker.first_name %></td>
+        <td><%= worker.last_name %></td>        
+        <td><%= link_to 'Edit', edit_worker_path(worker) ,:remote => true %></td>
+        <td><%= link_to 'Delete', worker, method: :delete, data: { confirm: 'Are you sure?' },:remote => true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

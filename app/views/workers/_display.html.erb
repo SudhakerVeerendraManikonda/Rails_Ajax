@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h5> Worker Details</h5>
+<br/>
+<p>
+  <strong>Employee ID:</strong>
+  <%= @worker.id %>
+</p>
+<p>
+  <strong>First name:</strong>
+  <%= @worker.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @worker.last_name %>
+</p>
+
+<br/>
+
+<h5> Worker Order Assigned to the Worker </h5>
+
+<%= render 'list_of_workorders' %> 
+
+<br/>
+

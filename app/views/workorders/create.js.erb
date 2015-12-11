@@ -1,0 +1,6 @@
+$('#workorderlist').html("<%= escape_javascript(render 'list_of_workorders') %>");
+$('#workorderlist').effect('highlight');
+$('#add_workorder').html("<%= escape_javascript(render 'form') %>");
+$("#workorder_notice").html("<%= escape_javascript(flash[:workorder_notice])%>");
+$('#workorder_notice').fadeIn();
+setTimeout(function() { $('#workorder_notice').fadeOut(); }, 2000);
